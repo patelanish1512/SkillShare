@@ -1,0 +1,20 @@
+{
+    "name": "skillshare",
+    "version": "1.0.0",
+    "description": "SkillShare - Real-Time Anonymous Skill Exchange Platform",
+    "main": "server/index.js",
+    "scripts": {
+        "start": "npm run server",
+        "server": "cd server && npm run dev",
+        "client": "cd client && npm run dev",
+        "dev": "concurrently \"npm run server\" \"npm run client\"",
+        "install-all": "npm install && npm install --prefix client && npm install --prefix server"
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.2"
+    },
+    "dependencies": {
+        "axios": "^1.13.5",
+        "socket.io-client": "^4.8.3"
+    }
+}
